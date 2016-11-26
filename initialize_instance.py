@@ -57,7 +57,6 @@ def init_ubuntu():
   run('chef --help')
   sudo('chef gem install knife-zero', pty=False)
   local('chef exec knife zero bootstrap '+ env.host +' --ssh-user ubuntu -i ~/.ssh/id_rsa_chef --sudo --run-list "recipe[base]"')
-  update_pkg()
 
 @parallel(pool_size=5)
 def update_pkg():
