@@ -77,7 +77,7 @@ end
 end
 
 #-- Development tools
-%w{ntp zsh traceroute automake make whois git cpufreqd cpufrequtils python python-devel}.each do |pkg|
+%w{ntp zsh traceroute automake make whois git cpufreqd cpufrequtils python}.each do |pkg|
   package pkg do 
     action :install
   end
