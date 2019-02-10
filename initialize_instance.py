@@ -50,7 +50,7 @@ def init_ubuntu():
 ##  sudo('dpkg-reconfigure --frontend noninteractive tzdata', pty=False)
 ##  run('date')
 ## for ubuntu14.04(END)
-  sudo('sed -i "s/UTC=yes/UTC=no/g" /etc/default/rcS')
+##  sudo('sed -i "s/UTC=yes/UTC=no/g" /etc/default/rcS')
   sudo('apt-get -y install ruby', pty=False)
   put('/usr/local/src/chefdk_1.0.3-1_amd64.deb','/tmp/')
   sudo('dpkg -l |grep chefdk || dpkg -i /tmp/chefdk_1.0.3-1_amd64.deb', pty=False)
