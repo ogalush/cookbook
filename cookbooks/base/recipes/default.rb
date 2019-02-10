@@ -76,8 +76,13 @@ end
   end
 end
 
+#-- パッケージインストール前にエラーになることがあるので最新化する
+apt_update 'update'
+apt_update 'upgrade'
+apt_update 'dist-upgrade'
+
 #-- Development tools
-%w{ntp zsh traceroute automake make whois git cpufreqd cpufrequtils sysstat python}.each do |pkg|
+%w{ntp zsh traceroute automake make whois git cpufreqd cpufrequtils}.each do |pkg|
   package pkg do 
     action :install
   end
